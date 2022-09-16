@@ -4,10 +4,26 @@ import java.util.Scanner;
  * 
  * @author Dan
  *1. Create a scanner object named input
+ *
  *2. Create a while loop that remains true
+ *
  *3. (In the loop) ask the user for the number of sides and store as an integer in numSides 
+ *
  *4. Initialize variables with data type double to store the area, perimeter, and interior angle
- *5. 
+ *
+ *5. Initialize variables with date type integer to store the number of sides and the length
+ *
+ *6. Check to see if the numSides is a whole number & >= 3 before, else tell user to use a different value
+ *
+ *7. Then ask the user to enter the side length and store it in sideLength
+ *
+ *8. Calculate the area and store in a for area then print
+ *
+ *9. Calculate the perimeter and store in p for perimeter then print
+ *
+ *10. Calculate the interior angle and store in intAngle for interior angle then print
+ *
+ *11. break out of loop
  */
 
 public class LA2a 
