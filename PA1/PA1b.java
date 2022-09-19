@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PA1b 
+public class PA1b
 {
 	public static void main(String[] args)
 	{
@@ -10,9 +10,11 @@ public class PA1b
 		int numInches = input.nextInt();
 		
 		int numYards = numInches/36;
-		numInches -= 36;
+		numInches %= 36;
+		System.out.println(numInches);
 		int numFeet = numInches/12;
-		numInches -= 12;
+		numInches %= 12;
+		System.out.println(numInches);
 		System.out.printf("Yards: %d %n", numYards);
 		System.out.printf("Feet: %d %n", numFeet);
 		System.out.printf("Inches: %d %n", numInches);
