@@ -1,0 +1,10 @@
+Do- while
+
+example:
+
+String input_value;
+
+do {
+  System.out.println("Enter y to print this message again: ");
+  input_value = input.nextIne();
+  } while (input_value.equals("y")
