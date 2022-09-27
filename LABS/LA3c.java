@@ -1,5 +1,5 @@
 /**
- * LA3c
+ * @Dan
  */
 
 import java.util.Scanner;
@@ -8,41 +8,40 @@ public class LA3c
 {
 	public static void main(String[] args)
 	{
+		/**
+		 * num1 num2 num3 (store the numbers entered by the user)
+		 * result (is first initialized and stores the answer depending on the operator)
+		 * op (is set to hold an empty value in order to run the do while loop to check if the operator is
+		 * in lowercase)
+		 */
 		Scanner input = new Scanner(System.in);
-		double num1, num2, num3;
-		String op;
+		double num1, num2, num3, result;
+		String op = "";
 
-		
 		System.out.printf("Enter three numbers: ");
-		while(!input.hasNextInt());
-		{
-			num1 = input.nextInt();
-			num2 = input.nextInt();
-			num3 = input.nextInt();
-			input.nextLine();
-		}
+		num1 = input.nextInt();
+		num2 = input.nextInt();
+		num3 = input.nextInt();
+		input.nextLine();
 		
-		System.out.printf("Entrer the operation: ");
-		op = input.nextLine();
-		op = op.toLowerCase();
+		do
+		{
+			System.out.printf("Entrer the operation: ");
+			op = input.nextLine();
+		}while(!op.equals(op.toLowerCase()));
 		
 		if(op.equals("min"))
 		{
-			double min;
-			min = Math.min(num1, Math.min(num2, num3));
-			System.out.printf("min(%.2f, %.2f, %.2f) = %.2f", num1, num2, num3, min);
+			result = Math.min(num1, Math.min(num2, num3));
 		}
 		else if(op.equals("l1"))
 		{
-			double sum;
-			sum = (Math.abs(num1)) + (Math.abs(num2)) + (Math.abs(num3));
-			System.out.printf("l1(%.2f, %.2f, %.2f) = %.2f", num1, num2, num3, sum);
+			result = (Math.abs(num1)) + (Math.abs(num2)) + (Math.abs(num3));
 		}
 		else
 		{
-			double quot;
-			quot = (Math.sqrt((num1 * num1) + (num2 * num2) + (num3 * num3)));
-			System.out.printf("l2(%.2f, %.2f, %.2f) = %.2f", num1, num2, num3, quot);
+			result = (Math.sqrt((num1 * num1) + (num2 * num2) + (num3 * num3)));
 		}
+		System.out.printf(op + "(%.2f, %.2f, %.2f) = %.2f", num1, num2, num3, result);
 	}
 }
